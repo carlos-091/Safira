@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f9ff;
+}
+
+/* HEADER */
+header {
+    background-color: #0a3d62;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+}
+
+.search-box {
+    display: flex;
+    width: 40%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #3c8dbc;
+    color: white;
+    border-radius: 0 4px 4px 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* CATEGORIAS */
+.categorias {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: white;
+}
+
+.categorias button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #eaf3ff;
+    color: #0a3d62;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.preco {
+    color: #0a3d62;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comprar {
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
