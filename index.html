@@ -2,78 +2,18 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Loja de Joias</title>
-
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* BODY */
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
-
-    /* HEADER */
-    header {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    /* CONTAINER */
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    /* PRODUTO */
-    .produto {
-      background: #fff;
-      border-radius: 10px;
-      padding: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .produto:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-    }
-
-    .produto img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .produto h3 {
-      margin-top: 10px;
-      font-size: 16px;
-      text-align: center;
-      font-weight: 500;
-    }
-  </style>
+  <title>Safira Joias</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  Loja de Joias
+<header class="header">
+  <img src="Safira.jpeg" alt="Logo Safira" class="logo">
+  <h1>Safira Joias</h1>
 </header>
 
-<div class="container">
+<main class="container">
 
   <!-- COLARES -->
   <div class="produto">
@@ -112,7 +52,7 @@
     <h3>pulseira_3</h3>
   </div>
 
-</div>
+</main>
 
 </body>
 </html>
