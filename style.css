@@ -13,17 +13,20 @@ body {
 }
 
 /* HEADER */
-header {
+.header {
   background: #111;
   color: #fff;
   text-align: center;
   padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
-/* CONTAINER GRID */
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* GRID */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -31,32 +34,29 @@ header {
   padding: 20px;
 }
 
-/* CARD PRODUTO */
+/* CARD */
 .produto {
   background: #fff;
   border-radius: 10px;
   padding: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.3s;
 }
 
-/* HOVER (efeito de interação) */
 .produto:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
-/* IMAGEM */
+/* IMG */
 .produto img {
   width: 100%;
   border-radius: 10px;
-  object-fit: cover;
 }
 
-/* TITULO */
+/* TEXTO */
 .produto h3 {
+  text-align: center;
   margin-top: 10px;
   font-size: 16px;
-  text-align: center;
-  font-weight: 500;
 }
