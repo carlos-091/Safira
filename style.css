@@ -1,62 +1,127 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --white:#fff;
+  --black:#000;
+  --gold:#C9A84C;
+  --gold-dark:#9A7A25;
+  --gray:#888;
+  --divider:#E8E3DC;
+
+  --font-display:'Cormorant Garamond', serif;
+  --font-body:'Inter', sans-serif;
 }
 
-/* BODY */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+  background:#fff;
+  font-family:var(--font-body);
+  color:#2A2A2A;
 }
 
-/* HEADER */
-.header {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+.site-header {
+  background:#000;
+  text-align:center;
+  padding:20px;
 }
 
-.logo {
-  width: 90px;
-  margin-bottom: 10px;
-  object-fit: contain;
+.header-logo {
+  width:140px;
+  mix-blend-mode:screen;
 }
 
-/* GRID */
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.hero {
+  background:#000;
+  text-align:center;
+  padding:40px;
+  color:#C9A84C;
 }
 
-/* CARD */
-.produto {
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: 0.3s;
+.hero-rule {
+  width:40px;
+  height:1px;
+  background:var(--gold);
+  margin:0 auto 10px;
 }
 
-.produto:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+.hero-tagline {
+  font-family:var(--font-display);
+  font-size:22px;
 }
 
-/* IMG */
-.produto img {
-  width: 100%;
-  border-radius: 10px;
+.hero-sub {
+  font-size:12px;
+  color:#888;
 }
 
-/* TEXTO */
-.produto h3 {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
+.products-section {
+  padding:40px 20px;
+}
+
+.section-header {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.section-label {
+  font-size:10px;
+  color:var(--gold);
+}
+
+.section-title {
+  font-family:var(--font-display);
+  font-size:28px;
+}
+
+.products-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+.card {
+  border:1px solid var(--divider);
+  transition:.3s;
+}
+
+.card:hover {
+  border-color:var(--gold);
+  transform:translateY(-3px);
+}
+
+.card-image-wrap {
+  aspect-ratio:1;
+}
+
+.card-image-wrap img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-body {
+  padding:10px;
+}
+
+.card-category {
+  font-size:10px;
+  color:var(--gray);
+}
+
+.card-name {
+  font-family:var(--font-display);
+  font-size:16px;
+}
+
+.site-footer {
+  background:#000;
+  text-align:center;
+  padding:20px;
+}
+
+.footer-logo {
+  width:100px;
+  mix-blend-mode:screen;
+}
+
+.footer-copy {
+  color:#666;
+  font-size:10px;
 }
