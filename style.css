@@ -2,7 +2,7 @@
 :root {
   --white:      #FFFFFF;
   --off-white:  #F8F7F5;
-  --black:      #000000; /* Perfeito para casar com o fundo de imagens JPEG */
+  --black:      #000000;
   --charcoal:   #2A2A2A;
   --gray:       #888888;
   --divider:    #E8E3DC;
@@ -63,7 +63,7 @@ img {
   object-fit: contain;
   margin: 0 auto;
   display: block;
-  mix-blend-mode: screen; /* Remove inteligentemente o fundo preto de JPEGs */
+  mix-blend-mode: screen;
 }
 
 /* === HERO === */
@@ -131,7 +131,6 @@ img {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  /* Cria colunas automaticamente ajustando de acordo com o tamanho da tela */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
@@ -150,11 +149,11 @@ img {
 .card:hover {
   border-color: var(--gold);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra leve estilo luxo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .card-image-wrap {
-  aspect-ratio: 1 / 1; /* Força a imagem a ser perfeitamente quadrada */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--off-white);
 }
@@ -167,7 +166,7 @@ img {
 }
 
 .card:hover .card-image-wrap img {
-  transform: scale(1.04); /* Zoom suave na foto ao passar o mouse */
+  transform: scale(1.04);
 }
 
 .card-body {
@@ -233,19 +232,13 @@ img {
   color: var(--white);
 }
 
-.btn-whatsapp svg {
+.icon-img {
   width: 13px;
   height: 13px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-/* Nova regra que substitui o .btn-whatsapp svg */
-.icon-img {
-  width: 16px;
-  height: auto;
   vertical-align: middle;
-  margin-right: 4px;
+  filter: invert(100%);
 }
+
 /* === FLOATING CTA (BOTÃO FLUTUANTE) === */
 .float-cta {
   position: fixed;
@@ -272,11 +265,10 @@ img {
   box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
 }
 
-.float-cta svg {
+.float-icon {
   width: 18px;
   height: 18px;
-  fill: currentColor;
-  flex-shrink: 0;
+  filter: invert(100%);
 }
 
 /* === GOLD RULE (LINHA DIVISÓRIA) === */
