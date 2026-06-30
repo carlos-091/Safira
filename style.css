@@ -236,7 +236,6 @@ img {
   width: 13px;
   height: 13px;
   vertical-align: middle;
-  filter: invert(100%);
 }
 
 /* === FLOATING CTA (BOTÃO FLUTUANTE) === */
@@ -268,7 +267,6 @@ img {
 .float-icon {
   width: 18px;
   height: 18px;
-  filter: invert(100%);
 }
 
 /* === GOLD RULE (LINHA DIVISÓRIA) === */
