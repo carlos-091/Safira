@@ -201,7 +201,8 @@ body {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    fill: #ffffff;
+    /* Transforma o ícone em branco para contrastar com o botão preto */
+    filter: brightness(0) invert(1);
 }
 
 /* Rodapé */
@@ -248,10 +249,12 @@ body {
     background-color: #20ba59;
 }
 
-.whatsapp-floating svg {
+.icon-floating {
     width: 22px;
     height: 22px;
     margin-right: 8px;
+    /* Remove esta linha se preferires usar o ícone original colorido no botão verde */
+    filter: brightness(0) invert(1);
 }
 
 .whatsapp-floating span {
