@@ -1,4 +1,6 @@
-/* Resets Básicos e Configurações Gerais */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS & RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,79 +8,84 @@
 }
 
 body {
+    background-color: #fdfdfd; /* Fundo off-white clean e sofisticado */
     font-family: 'Montserrat', sans-serif;
-    background-color: #fcfcfc;
-    color: #333333;
+    color: #1a1a1a;
     line-height: 1.6;
-    padding-bottom: 80px;
 }
 
-/* Cabeçalho */
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
 .main-header {
-    text-align: center;
-    padding: 40px 20px 20px 20px;
     background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .brand-logo {
     display: inline-block;
-    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
 .brand-logo h1 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 36px;
     font-weight: 400;
-    color: #000000;
+    letter-spacing: 8px;
+    color: #111111;
+}
+
+.logo-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: #b8975e; /* Tom de ouro sofisticado */
+    display: block;
     margin-top: -5px;
 }
 
 .diamond-icon {
-    font-size: 1.2rem;
-    color: #c9a054;
-}
-
-.logo-sub {
-    font-size: 0.75rem;
+    color: #b8975e;
+    font-size: 14px;
     display: block;
-    letter-spacing: 8px;
-    margin-right: -8px;
-    color: #666666;
-    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .gold-divider {
-    width: 60px;
     height: 1px;
-    background-color: #d4af37;
-    margin: 25px auto;
+    width: 60px;
+    background-color: #b8975e;
+    margin: 20px auto;
 }
 
 .header-titles h2 {
     font-family: 'Cinzel', serif;
-    font-size: 1.4rem;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #222222;
     font-weight: 600;
-    color: #111111;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 0.9rem;
+    font-size: 12px;
     color: #777777;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
-/* Secção do Catálogo */
+/* ==========================================================================
+   3. SECÇÃO DE TÍTULO DO CATÁLOGO
+   ========================================================================== */
 .catalog-title-section {
     text-align: center;
-    margin: 40px 0 20px 0;
+    padding: 40px 20px 20px 20px;
 }
 
 .tag-official {
-    font-size: 0.75rem;
+    font-size: 10px;
     letter-spacing: 2px;
-    color: #c9a054;
+    color: #b8975e;
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
@@ -86,26 +93,27 @@ body {
 
 .catalog-title-section h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 2px;
     color: #111111;
 }
 
-/* Grelha de Produtos Responsiva */
+/* ==========================================================================
+   4. GRELHA DE PRODUTOS (GRID)
+   ========================================================================== */
 .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 30px;
 }
 
-/* Cartão do Produto */
 .product-card {
     background-color: #ffffff;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    border-radius: 0px; /* Cantos retos trazem um aspeto mais luxuoso */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -114,13 +122,13 @@ body {
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .product-image {
     width: 100%;
-    height: 280px;
-    background-color: #f7f7f7;
+    height: 340px;
+    background-color: #f5f5f5; /* Bloco cinza discreto enquanto carrega */
     overflow: hidden;
 }
 
@@ -135,7 +143,6 @@ body {
     transform: scale(1.04);
 }
 
-/* Informações do Produto */
 .product-info {
     padding: 20px;
     display: flex;
@@ -144,135 +151,147 @@ body {
 }
 
 .product-category {
-    font-size: 0.7rem;
-    letter-spacing: 1.5px;
+    font-size: 9px;
+    letter-spacing: 2px;
     color: #999999;
     font-weight: 600;
     margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .product-name {
     font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 15px;
     color: #111111;
+    font-weight: 600;
     min-height: 44px;
+    line-height: 1.4;
     margin-bottom: 8px;
-    line-height: 1.3;
 }
 
 .product-price {
-    font-size: 1.15rem;
+    font-size: 16px;
     font-weight: 600;
     color: #111111;
     margin-bottom: 10px;
 }
 
 .product-description {
-    font-size: 0.85rem;
+    font-size: 12px;
     color: #666666;
     margin-bottom: 20px;
     flex-grow: 1;
-    font-weight: 300;
 }
 
-/* Botão WhatsApp do Cartão */
+/* ==========================================================================
+   5. BOTÕES DO WHATSAPP NOS CARDS (CORES REFINADAS)
+   ========================================================================== */
 .btn-whatsapp {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000000;
+    gap: 8px;
+    background-color: #111111; /* Preto nobre */
     color: #ffffff;
     text-decoration: none;
-    padding: 12px;
-    font-size: 0.8rem;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    padding: 14px;
+    border: 1px solid #111111;
+    transition: all 0.3s ease;
 }
 
 .btn-whatsapp:hover {
-    background-color: #222222;
+    background-color: transparent;
+    color: #111111;
 }
 
 .icon-btn {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    /* Transforma o ícone em branco para contrastar com o botão preto */
-    filter: brightness(0) invert(1);
+    width: 14px;
+    height: 14px;
+    filter: invert(1); /* Torna o ícone branco para contrastar com o botão */
+    transition: filter 0.3s ease;
 }
 
-/* Rodapé */
+.btn-whatsapp:hover .icon-btn {
+    filter: invert(0); /* Torna o ícone preto ao passar o rato */
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
 .main-footer {
-    text-align: center;
-    padding: 60px 20px;
     background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    padding: 40px 20px;
+    text-align: center;
     margin-top: 60px;
-    border-top: 1px solid #f0f0f0;
 }
 
 .footer-logo {
     font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 4px;
     color: #111111;
+    margin-bottom: 10px;
 }
 
 .main-footer p {
-    font-size: 0.8rem;
+    font-size: 11px;
     color: #999999;
 }
 
-/* Botão Flutuante Fixo (Canto Inferior Direito) */
+/* ==========================================================================
+   7. CORREÇÃO DO BOTÃO FLUTUANTE (FIXO & COMPACTO)
+   ========================================================================== */
 .whatsapp-floating {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* Verde oficial do WhatsApp */
     color: #ffffff;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 30px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 9999;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10000; /* Garante que fica por cima de tudo sem bugar */
+    text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-floating:hover {
-    transform: scale(1.05);
-    background-color: #20ba59;
+    transform: translateY(-5px);
+    background-color: #20ba5a;
 }
 
+/* LIMITADOR CRÍTICO: Isto impede que o ícone gigante quebre a tela */
 .icon-floating {
     width: 22px;
     height: 22px;
-    margin-right: 8px;
-    /* Remove esta linha se preferires usar o ícone original colorido no botão verde */
-    filter: brightness(0) invert(1);
+    display: block;
+    object-fit: contain;
 }
 
 .whatsapp-floating span {
-    font-size: 0.9rem;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.5px;
+    white-space: nowrap; /* Impede que o texto quebre ou fique vertical */
 }
 
-/* Responsividade para Ecrãs Pequenos / Telemóvel */
+/* Responsividade para ecrãs menores */
 @media (max-width: 480px) {
-    .brand-logo h1 {
-        font-size: 2rem;
+    .whatsapp-floating {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px; /* Transforma-se num círculo perfeito em telemóveis */
     }
-    .header-titles h2 {
-        font-size: 1.1rem;
-    }
-    .products-grid {
-        grid-template-columns: 1fr;
-        padding: 15px;
+    .whatsapp-floating span {
+        display: none; /* Oculta o texto em ecrãs pequenos para não ocupar espaço */
     }
 }
