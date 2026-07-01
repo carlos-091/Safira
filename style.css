@@ -114,7 +114,7 @@ body {
 .card-image-wrap {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Mantém o container perfeitamente quadrado (1:1) */
+  padding-top: 100%;
   background-color: #fcfcfc;
   border-bottom: 1px solid #f5f5f5;
   overflow: hidden;
@@ -126,12 +126,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz as fotos preencherem o quadrado sem distorcer */
-  transition: transform 0.5s ease;
-}
-
-.card:hover .card-image-wrap img {
-  transform: scale(1.04);
+  object-fit: cover;
 }
 
 .card-body {
@@ -156,7 +151,7 @@ body {
   color: #222222;
   line-height: 1.3;
   margin-bottom: 8px;
-  min-height: 42px; /* Garante alinhamento mesmo com títulos de tamanhos diferentes */
+  min-height: 42px;
 }
 
 .card-price {
@@ -171,7 +166,7 @@ body {
   color: #666666;
   line-height: 1.5;
   margin-bottom: 20px;
-  flex-grow: 1; /* Empurra o botão do Whatsapp sempre para o rodapé do card */
+  flex-grow: 1;
 }
 
 /* BOTÃO WHATSAPP CARD */
