@@ -2,7 +2,7 @@
 :root {
   --white:      #FFFFFF;
   --off-white:  #FDFDFD; /* Fundo off-white acetinado da boutique */
-  --black:      #111111; /* Preto nobre e profundo para contraste */
+  --black:      #000000; /* Preto absoluto ajustado para a logo */
   --charcoal:   #1A1A1A; /* Texto escuro suave para leitura confortável */
   --gray:       #999999;
   --divider:    #EAEAEA; /* Linhas divisórias finas e discretas */
@@ -45,23 +45,51 @@ img {
   height: auto; 
 }
 
-/* === HEADER === */
+/* === HEADER (BLACK & GOLD COM LOGO ESTILIZADA) === */
 .site-header {
-  background: var(--white);
-  padding: 1rem var(--pad);
+  background: var(--black);
+  padding: 2rem var(--pad);
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 2px solid var(--gold); /* Linha divisória em ouro escuro */
 }
 
-.header-logo {
-  width: 140px;
-  max-height: 80px;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
+/* Construção da Logo CSS no estilo da Imagem */
+.brand-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.brand-logo .diamond-svg {
+  stroke: var(--gold);
+  margin-bottom: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.brand-logo .brand-name {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand-logo .brand-sub {
+  font-family: var(--font-body);
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  align-self: flex-end;
+  margin-right: 5px; 
+  margin-top: 3px;
+  color: var(--gold-light);
 }
 
 /* === HERO === */
@@ -284,25 +312,17 @@ img {
   white-space: nowrap;
 }
 
-/* === GOLD RULE === */
-.gold-rule {
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* === FOOTER === */
+/* === FOOTER (Ajustado para o Tema Black & Gold) === */
 .site-footer {
-  background: var(--white);
+  background: var(--black);
   padding: 3rem var(--pad);
   text-align: center;
-  border-top: 1px solid var(--divider);
+  border-top: 1px solid var(--gold);
 }
 
 .footer-copy {
   font-size: 0.65rem;
-  color: var(--gray);
+  color: var(--gold-light);
   letter-spacing: 0.12em;
 }
 
