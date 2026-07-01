@@ -1,338 +1,70 @@
-/* === TOKENS (Paleta de Cores Premium Aplicada) === */
 :root {
-  --white:      #FFFFFF;
-  --off-white:  #FDFDFD; /* Fundo off-white acetinado da boutique */
-  --black:      #111111; /* Preto nobre e profundo para contraste */
-  --charcoal:   #1A1A1A; /* Texto escuro suave para leitura confortável */
-  --gray:       #999999;
-  --divider:    #EAEAEA; /* Linhas divisórias finas e discretas */
-  --gold:       #B8975E; /* Tom de ouro sofisticado de alta joalharia */
+  --black:      #000000;
+  --gold:       #B8975E;
   --gold-light: #E2C46A;
-  --gold-dark:  #9A7A25;
-  --whatsapp:   #25D366;
-
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
-  --max-width:    1100px;
-  --pad:          1.25rem;
+  --white:      #FFFFFF;
+  --off-white:  #FDFDFD;
+  --divider:    #333333;
 }
 
-*, *::before, *::after { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-}
+body { background: var(--off-white); font-family: 'Inter', sans-serif; }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: var(--off-white);
-  color: var(--charcoal);
-  font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img { 
-  display: block; 
-  width: 100%; 
-  height: auto; 
-}
-
-/* === HEADER === */
-.site-header {
-  background: var(--white);
-  padding: 1rem var(--pad);
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--divider);
-}
-
-.header-logo {
-  width: 140px;
-  max-height: 80px;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
-}
-
-/* === HERO === */
-.hero {
-  background: var(--white);
-  padding: 2.5rem var(--pad) 3rem;
-  text-align: center;
-  border-bottom: 1px solid var(--divider);
-}
-
-.hero-rule {
-  width: 3rem;
-  height: 1px;
-  background: var(--gold);
-  margin: 0 auto 1.25rem;
-}
-
-.hero-tagline {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 4vw, 1.75rem);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--black);
-  letter-spacing: 0.04em;
-  margin-bottom: 0.5rem;
-}
-
-.hero-sub {
-  font-size: 0.7rem;
-  color: var(--gold);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* === SECTION HEADER === */
-.section-header {
-  padding: 2.5rem var(--pad) 1.5rem;
-  text-align: center;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.section-label {
-  display: block;
-  font-size: 0.6rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.4rem;
-}
-
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
-  font-weight: 300;
-  color: var(--black);
-}
-
-/* === PRODUCTS === */
-.products-section {
-  padding: 0 var(--pad) 6rem;
-}
-
-.products-grid {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-/* === CARD === */
-.card {
-  background: var(--white);
-  border: 1px solid var(--divider);
-  border-radius: 0px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  border-color: var(--black);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-.card-image-wrap {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: #f5f5f5;
-}
-
-.card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.card:hover .card-image-wrap img {
-  transform: scale(1.04);
-}
-
-.card-body {
-  padding: 1.25rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.card-category {
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gray);
-}
-
-.card-name {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: var(--black);
-  line-height: 1.4;
-}
-
-.card-price {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--black);
-}
-
-.card-desc {
-  font-size: 0.75rem;
-  color: #666666;
-  line-height: 1.5;
-  flex: 1;
-  margin-bottom: 0.5rem;
-}
-
-/* === WHATSAPP BUTTON (EFEITO LUXO PRETO/TRANSPARENTE) === */
-.btn-whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.85rem;
+/* === HEADER E RODAPÉ (PRETO E DOURADO) === */
+.site-header, .site-footer {
   background: var(--black);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0px;
-  border: 1px solid var(--black);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: auto;
-}
-
-.btn-whatsapp:hover { 
-  background: transparent;
-  color: var(--black);
-}
-
-.btn-whatsapp img {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
-  flex-shrink: 0;
-  filter: invert(1);
-  transition: filter 0.3s ease;
-}
-
-.btn-whatsapp:hover img {
-  filter: invert(0);
-}
-
-/* === FLOATING CTA (CONCIERGE DE LUXO EM FUNDO BRANCO) === */
-.float-cta {
-  position: fixed;
-  bottom: 1.85rem;
-  right: 1.85rem;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--white);
-  color: var(--black);
-  text-decoration: none;
-  padding: 0.8rem 1.4rem;
-  border-radius: 50px;
-  border: 1px solid var(--divider);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.float-cta:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.float-cta img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.float-cta span {
-  white-space: nowrap;
-}
-
-/* === GOLD RULE === */
-.gold-rule {
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* === FOOTER === */
-.site-footer {
-  background: var(--white);
-  padding: 3rem var(--pad);
+  padding: 2rem var(--pad);
   text-align: center;
-  border-top: 1px solid var(--divider);
+  border-bottom: 2px solid var(--gold);
+}
+
+.site-footer { border-top: 2px solid var(--gold); border-bottom: none; }
+
+.logo-placeholder {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
 }
 
 .footer-copy {
-  font-size: 0.65rem;
-  color: var(--gray);
-  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
 }
 
-/* === RESPONSIVE === */
-@media (min-width: 600px) {
-  .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
+/* === CORREÇÃO DO ÍCONE (PARA NÃO FICAR GIGANTE) === */
+.float-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--black);
+  color: var(--gold);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--gold);
+  text-decoration: none;
+  border-radius: 50px;
+  z-index: 9999;
 }
 
-@media (min-width: 900px) {
-  .site-header { padding: 1.25rem 2rem; }
-  .hero { padding: 3.5rem 2rem 4rem; }
-  .products-section { padding: 0 2rem 6rem; }
+.float-cta img {
+  width: 20px !important;
+  height: 20px !important;
+  filter: invert(65%) sepia(20%) saturate(1500%) hue-rotate(10deg) brightness(90%) contrast(90%);
 }
 
-@media (max-width: 480px) {
-  .float-cta {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    padding: 12px;
-  }
-  .float-cta span {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card, .card-image-wrap img, .btn-whatsapp, .float-cta { 
-    transition: none !important; 
-  }
+/* === CARDS === */
+.card { border: 1px solid #ddd; background: var(--white); }
+.btn-whatsapp {
+  background: var(--black);
+  color: var(--gold);
+  padding: 10px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
